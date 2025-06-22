@@ -80,3 +80,12 @@ export const faqs = [
   { question: "What kind of counseling therapists offer?", answer: "This is the answer" },
   { question: "What types of counseling therapists offer?", answer: "This is the answer" },
 ]
+
+export const timings = [
+  { day: "Monday", hours: "07 AM - 09 PM" },
+  { day: "Tuesday", hours: "07 AM - 09 PM" },
+  { day: "Wednesday", hours: "07 AM - 09 PM" },
+  { day: "Thursday", hours: "07 AM - 09 PM" },
+  { day: "Friday", hours: "07 AM - 09 PM" },
+  { day: "Saturday", hours: "07 AM - 09 PM" },
+]
