@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { User } from "lucide-react"
-import { coaches } from "@/config/data"
+import { coaches, milestones } from "@/config/data"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from "next/image"
 
@@ -28,19 +28,20 @@ export default function HistoryPointCarousel() {
         </div>
         <div className="col-span-2">
           <CarouselContent className="-ml-2 md:-ml-4">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
-              <CarouselItem key={item} className="max-h-[300px] pl-2 md:pl-4 basis-1/1 sm:basis-1/2 md:basis-1/3 h-full">
+            {milestones.map((item) => (
+              <CarouselItem key={item.id} className="max-h-[300px] pl-2 md:pl-4 basis-1/1 sm:basis-1/2 md:basis-1/3 h-full">
                 <div className="bg-white rounded-[10px] aspect-square flex flex-col">
-                  <div className="p-4">
-                    <h3 className="text-[32px] md:text-[40px] text-[#6DB20D] font-bold mt-8">2016-2018</h3>
-                    <p className="text-[#547593] text-[12px] md:text-[14px] leading-[1.2] mt-2">Normal distribution of letters, as opposed to using 'Content here, content here</p>
+                  <div className="p-4 h-auto">
+                    <h3 className="text-[32px] md:text-[40px] text-[#6DB20D] font-bold mt-8">{item.year}</h3>
+                    <p className="text-[#547593] text-[12px] md:text-[14px] leading-[1.2] mt-2">{item.title}</p>
+                    <p className="text-[#547593] text-[12px] md:text-[14px] leading-[1.2] mt-2">{item.description}</p>
                   </div>
                   <Image
                     src="/health-point.png"
                     alt=""
                     height={200}
                     width={200}
-                    className="w-full mt-auto h-[60px] object-cover"
+                    className="w-full mt-auto h-[60px] object-cover rounded-[10px]"
                   />
                 </div>
               </CarouselItem>

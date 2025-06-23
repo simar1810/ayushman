@@ -34,6 +34,14 @@ export default function RegistrationForm() {
               />
             </div>
             <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+              <input
+                type="number"
+                className="w-full px-4 py-3 border-b-1 border-gray-300 focus:outline-none"
+                placeholder="Your phone number"
+              />
+            </div>
+            <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
               <textarea
                 rows={1}

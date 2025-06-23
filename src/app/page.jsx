@@ -1,3 +1,4 @@
+"use client";
 import { ImWhatsapp } from "react-icons/im";
 import AchievementsCarousel from "@/components/globals/home-page/AchievementsCarousel";
 import Faqs from "@/components/globals/home-page/Faqs";
@@ -28,8 +29,14 @@ import Image from "next/image";
 import Link from "next/link";
 import RegistrationForm from "@/components/globals/core/RegistrationForm";
 import GoogleTranslate from "@/components/googletranslator";
+import { useRef, useState } from "react";
+import Popupmodal from "@/components/PopupModal";
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
   return (
     <main>
       <div className="bg-[]">
@@ -37,14 +44,17 @@ export default function Home() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10 flex flex-col md:flex-row items-center gap-10">
             <div>
               <h3 className="text-[40px] md:text-[72px] font-bold leading-[1.1]">
-                We Care AboutYour Health
+                We Care About Your Wellness
               </h3>
               <p className="text-[24px] md:text-[40px] text-[#6DB20D]">
                 Health care solutions
               </p>
               <p className="max-w-[40ch] text-[#5E6883] text-[16px]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy{" "}
+                Nutrition & Lifestyle Solutions That Work We empower individuals
+                to transform their health with personalized nutrition, wellness
+                coaching, and holistic lifestyle programs. Whether you’re
+                looking to improve your own health or build a career in
+                wellness, we’ve got the tools, training, and support you need.
               </p>
             </div>
             <Image
@@ -68,8 +78,11 @@ export default function Home() {
                   <p className="text-[#6DB20D] font-bold">Clinic name</p>
                   <p>Shiva Clinic Center</p>
                 </div>
-                <Button className="bg-[#6DB20D] hover:bg-[#6DB20D] rounded-full">
-                  Search Now
+                <Button
+                  className="bg-[#6DB20D] hover:bg-[#6DB20D] rounded-full"
+                  onClick={handleOpenModal}
+                >
+                  Register Now
                 </Button>
               </div>
               <Image
@@ -152,25 +165,38 @@ export default function Home() {
       <section className="bg-[#EF8C6B]/10">
         <div className="mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="max-w-[600px] mx-auto lg:mr-0 lg:ml-auto py-4 pl-4">
+            <div className="max-w-[600px] mx-auto lg:mr-0 lg:ml-auto py-10 pl-4">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Id nisl lacus posuere accumsan pretium, bibendum
+                Business Opportunity
               </h2>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <p className="text-gray-600">Quick pain-reducing treatment</p>
-                </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                Want to Build Your Own Wellness Business? Become a certified
+                coach and run your own wellness franchise with our complete
+                ecosystem:
+              </h3>
+              <div className=" space-y-4 mb-8">
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur
+                    🌱 Learn from industry experts
                   </p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <p className="text-gray-600">
-                    Professional medical consultation
+                    📦 Get proven business systems
+                  </p>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                  <p className="text-gray-600">
+                    💼 Full branding & marketing support
+                  </p>
+                </div>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
+                  <p className="text-gray-600">
+                    🤝 Community of 6,800+ coaches
                   </p>
                 </div>
               </div>
@@ -211,6 +237,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {showModal && <Popupmodal onClose={handleCloseModal} />}
       <Faqs />
     </main>
   );

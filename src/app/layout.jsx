@@ -39,17 +39,32 @@ export default function RootLayout({ children }) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center gap-4 py-4 relative">
               <nav className="hidden md:flex space-x-4">
-                <Link href="#" className="text-gray-700 hover:text-green-500">
+                <Link href="/" className="text-gray-700 hover:text-green-500">
                   Home
                 </Link>
-                <Link href="#" className="text-gray-700 hover:text-green-500">
+                <Link
+                  href="/coaches"
+                  className="text-gray-700 hover:text-green-500"
+                >
                   Coaches
                 </Link>
-                <Link href="#" className="text-gray-700 hover:text-green-500">
+                <Link
+                  href="/coach-services"
+                  className="text-gray-700 hover:text-green-500"
+                >
                   Pricing
                 </Link>
-                <Link href="#" className="text-gray-700 hover:text-green-500">
+                <Link
+                  href="/contact"
+                  className="text-gray-700 hover:text-green-500"
+                >
                   Contact Us
+                </Link>
+                <Link
+                  href="/about"
+                  className="text-gray-700 hover:text-green-500"
+                >
+                  About Us
                 </Link>
               </nav>
               <Image
@@ -86,8 +101,10 @@ export default function RootLayout({ children }) {
                   className="h-16 object-contain"
                 />
                 <p className="text-gray-400 mb-4">
-                  Providing comprehensive healthcare solutions for mental
-                  wellness and overall health.
+                  We’re on a mission to make India healthier—one meal, one
+                  coach, one transformation at a time. From personalized plans
+                  to scalable franchise support, we’re the trusted name in
+                  nutrition & wellness entrepreneurship.
                 </p>
                 <div className="flex space-x-4">
                   <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
@@ -112,29 +129,18 @@ export default function RootLayout({ children }) {
                 >
                   About Us
                 </Link>
+               
                 <Link
                   className="block mb-1 text-gray-400 hover:text-white"
-                  href="/"
-                >
-                  Press & Media
-                </Link>
-                <Link
-                  className="block mb-1 text-gray-400 hover:text-white"
-                  href="/"
-                >
-                  Careers
-                </Link>
-                <Link
-                  className="block mb-1 text-gray-400 hover:text-white"
-                  href="/"
-                >
-                  Careers Advertise with us
-                </Link>
-                <Link
-                  className="block mb-1 text-gray-400 hover:text-white"
-                  href="/"
+                  href="/contact"
                 >
                   Contact us
+                </Link>
+                <Link
+                  className="block mb-1 text-gray-400 hover:text-white"
+                  href="/register"
+                >
+                  Register
                 </Link>
               </div>
 
