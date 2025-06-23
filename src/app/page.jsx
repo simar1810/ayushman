@@ -6,10 +6,28 @@ import TestimonialsCarousel from "@/components/globals/home-page/TestimonialsCar
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { services } from "@/config/data";
-import { Calendar, CheckCircle, Dot, Facebook, Heart, Instagram, Linkedin, Mail, MapPin, Menu, Phone, Star, Twitter, User, Users, Youtube } from "lucide-react";
+import {
+  Calendar,
+  CheckCircle,
+  Dot,
+  Facebook,
+  Heart,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Menu,
+  Phone,
+  Star,
+  Twitter,
+  User,
+  Users,
+  Youtube,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import RegistrationForm from "@/components/globals/core/RegistrationForm";
+import GoogleTranslate from "@/components/googletranslator";
 
 export default function Home() {
   return (
@@ -21,10 +39,13 @@ export default function Home() {
               <h3 className="text-[40px] md:text-[72px] font-bold leading-[1.1]">
                 We Care AboutYour Health
               </h3>
-              <p className="text-[24px] md:text-[40px] text-[#6DB20D]">Health care solutions</p>
-              <p className="max-w-[40ch] text-[#5E6883] text-[16px]">Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. Lorem Ipsum has been
-                the industry's standard dummy </p>
+              <p className="text-[24px] md:text-[40px] text-[#6DB20D]">
+                Health care solutions
+              </p>
+              <p className="max-w-[40ch] text-[#5E6883] text-[16px]">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy{" "}
+              </p>
             </div>
             <Image
               src="/hero.png"
@@ -47,7 +68,9 @@ export default function Home() {
                   <p className="text-[#6DB20D] font-bold">Clinic name</p>
                   <p>Shiva Clinic Center</p>
                 </div>
-                <Button className="bg-[#6DB20D] hover:bg-[#6DB20D] rounded-full">Search Now</Button>
+                <Button className="bg-[#6DB20D] hover:bg-[#6DB20D] rounded-full">
+                  Search Now
+                </Button>
               </div>
               <Image
                 src="/wp-logo.png"
@@ -95,11 +118,16 @@ export default function Home() {
       <section className="py-16 bg-[#F4F1EA]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="max-w-[20ch] text-[32px] md:text-[48px] leading-[1.2] text-center md:text-left font-bold text-gray-900 mb-4">Holistic Mental Health Solutions</h2>
+            <h2 className="max-w-[20ch] text-[32px] md:text-[48px] leading-[1.2] text-center md:text-left font-bold text-gray-900 mb-4">
+              Holistic Mental Health Solutions
+            </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="bg-white hover:bg-[#F0FFD9] transition-shadow p-">
+              <Card
+                key={index}
+                className="bg-white hover:bg-[#F0FFD9] transition-shadow p-"
+              >
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <Image
@@ -110,7 +138,9 @@ export default function Home() {
                       className="h-16 object-contain"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {service.title}
+                  </h3>
                   <p className="text-gray-600">{service.description}</p>
                 </CardContent>
               </Card>
@@ -133,14 +163,20 @@ export default function Home() {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur</p>
+                  <p className="text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur
+                  </p>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
-                  <p className="text-gray-600">Professional medical consultation</p>
+                  <p className="text-gray-600">
+                    Professional medical consultation
+                  </p>
                 </div>
               </div>
-              <Button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800">Read More</Button>
+              <Button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800">
+                Read More
+              </Button>
             </div>
             <div>
               <Image
@@ -160,14 +196,18 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Coaches</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Coaches
+            </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">Receive health & wellness updates and tips right to your inbox</p>
-            <Button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800">Subscribe</Button>
+            <p className="text-gray-600 mb-6">
+              Receive health & wellness updates and tips right to your inbox
+            </p>
+            <Button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800">
+              Subscribe
+            </Button>
           </div>
         </div>
       </section>
