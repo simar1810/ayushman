@@ -11,9 +11,9 @@ export default function Navbar() {
   return (
     <header className="bg-white shadow-md relative top-0 left-0 w-full z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 relative">
+        <div className="flex justify-end items-center py-4 relative">
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-6 text-[16px] font-medium">
+          {/* <nav className="hidden md:flex space-x-6 text-[16px] font-medium">
             {[
               { href: "/", label: "Home" },
               { href: "/coaches", label: "Coaches" },
@@ -29,7 +29,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-          </nav>
+          </nav> */}
 
           {/* Center Logo */}
           <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -68,11 +68,10 @@ export default function Navbar() {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-0 right-0 w-3/4 max-w-xs h-full bg-white shadow-lg z-40 transform ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out flex flex-col justify-between md:hidden`}
+        className={`fixed top-0 right-0 w-3/4 max-w-xs h-full bg-white shadow-lg z-40 transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out flex flex-col justify-between md:hidden`}
       >
-        <div className="flex flex-col p-6 space-y-6 text-[16px] font-medium">
+        {/* <div className="flex flex-col p-6 space-y-6 text-[16px] font-medium">
           {[
             { href: "/", label: "Home" },
             { href: "/coaches", label: "Coaches" },
@@ -89,16 +88,16 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-        </div>
+        </div> */}
 
         {/* Mobile Google Translate + Contact Info */}
-        <div className="p-6 border-t border-gray-200 space-y-4">
+        <div className="flex flex-col justify-between h-full p-6 border-t border-gray-200 space-y-4">
           {/* Google Translate for Mobile */}
           <div className="flex justify-center">
             <GoogleTranslate />
           </div>
 
-          <div className="flex flex-col items-center space-y-2 text-sm text-gray-600">
+          <div className="mt-auto flex flex-col items-center space-y-2 text-sm text-gray-600">
             <Image
               src="/logo.svg"
               height={48}

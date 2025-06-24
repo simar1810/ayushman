@@ -73,7 +73,7 @@ function Popupmodal({ onClose, onShowModal }) {
         ) : (
           <>
             <h2 className="text-3xl font-semibold text-center mb-2 text-black">
-              Book Your Demo with Our Experts Now
+              Register Now
             </h2>
             <p className="text-center  text-sm mb-6 text-black">
               (Limited slots per day)
