@@ -65,22 +65,14 @@ export default function Home() {
               className="max-h-[450px] sm:max-h-[550px] lg:max-h-[650px] object-contain"
             />
             <div className="w-[80%] md:w-full left-1/2 translate-x-[-50%] absolute flex items-center justify-between bottom-0 md:bottom-6 md:left-0 md:translate-x-0 rounded-full">
-              <div className="bg-white flex items-center  rounded-full transition-transform duration-300 hover:shadow-xl hover:scale-105">
+              <div className="bg-[#F0FFD9]  rounded-full shadow-md mt-[200px]  hover:shadow-xl hover:scale-105 transition-transform duration-300 inline-flex items-center justify-center px-2 py-2 w-full sm:w-auto">
                 <Button
-                  className="bg-[#6DB20D] hover:bg-[#5a9c0b] text-white font-semibold py-6 px-10 rounded-full transition-colors duration-200"
+                  className="w-full sm:w-auto bg-[#6DB20D] hover:bg-[#5a9c0b] text-white font-semibold text-sm sm:text-base md:text-lg py-2 sm:py-3 md:py-4 px-4 sm:px-6 md:px-10 rounded-full transition-colors duration-200"
                   onClick={handleOpenModal}
                 >
                   Register Now
                 </Button>
               </div>
-
-              <Image
-                src="/wp-logo.png"
-                height={100}
-                width={100}
-                alt=""
-                className="w-[56px] h-[56px] object-cover mr-10 hidden lg:block"
-              />
             </div>
           </div>
         </div>
@@ -206,9 +198,9 @@ export default function Home() {
         </div>
       </section>
       <TestimonialsCarousel />
-      <RegistrationForm />
-      <OurCoachesCarousel />
-      <section className="py-16 bg-white">
+      {/* <RegistrationForm />
+      <OurCoachesCarousel /> */}
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -225,9 +217,9 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
       {showModal && <Popupmodal onClose={handleCloseModal} />}
-      <Faqs />
+      {/* <Faqs /> */}
     </main>
   );
 }

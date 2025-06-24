@@ -13,6 +13,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import GoogleTranslate from "@/components/googletranslator";
+import Navbar from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,50 +36,44 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="bg-white shadow-sm">
+        {/* <header className="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center gap-4 py-4 relative">
-              <nav className="hidden md:flex space-x-4">
-                <Link href="/" className="text-gray-700 hover:text-green-500">
-                  Home
-                </Link>
-                <Link
-                  href="/coaches"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  Coaches
-                </Link>
-                <Link
-                  href="/coach-services"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/contact"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  href="/about"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  About Us
-                </Link>
+            <div className="flex justify-between items-center py-4 relative">
+              {/* Left Nav
+              <nav className="hidden md:flex space-x-6 text-[16px] font-medium ">
+                {[
+                  { href: "/", label: "Home" },
+                  { href: "/coaches", label: "Coaches" },
+                  { href: "/coach-services", label: "Pricing" },
+                  { href: "/contact", label: "Contact Us" },
+                  { href: "/about", label: "About Us" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-gray-700 hover:text-green-600 hover:underline underline-offset-4 transition-colors duration-200 "
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </nav>
-              <Image
-                src="/logo.svg"
-                height={100}
-                width={100}
-                alt=""
-                className="h-16 object-contain md:absolute top-1/2 left-1/2 md:translate-x-[-50%] md:translate-y-[-50%] "
-              />
-              <div className="flex items-center space-x-4 md:space-x-8">
-                <Button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 ml-auto md:ml-0">
-                  Book Now
-                </Button>
-                <button className="md:hidden">
+
+              {/* Center Logo 
+              <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <Link href="/">
+                  <Image
+                    src="/logo.svg"
+                    height={64}
+                    width={64}
+                    alt="Logo"
+                    className="h-16 w-16 object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
+                  />
+                </Link>
+              </div>
+
+              {/* Right Side (Mobile Menu + Translate) 
+              <div className="flex items-center space-x-4 md:space-x-6">
+                <button className="md:hidden text-gray-600 hover:text-green-600 transition-colors duration-200">
                   <Menu className="h-6 w-6" />
                 </button>
                 <div className="flex items-center space-x-2">
@@ -87,7 +82,11 @@ export default function RootLayout({ children }) {
               </div>
             </div>
           </div>
-        </header>
+        </header> */}
+        {/* <div className="mb-1">
+          <Navbar />
+        </div> */}
+
         {children}
         <footer className="bg-[#323333] text-white pt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,11 +106,38 @@ export default function RootLayout({ children }) {
                   nutrition & wellness entrepreneurship.
                 </p>
                 <div className="flex space-x-4">
-                  <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Linkedin className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Youtube className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  <Link
+                    href="https://www.facebook.com/ayushmanhealthsolution/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/ayushmanhealthsolution/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link
+                    href="https://x.com/AyushmanHS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/channel/UCzXX45tB44qdszNbPe01S0Q"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Youtube className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
                 </div>
               </div>
 
@@ -129,7 +155,7 @@ export default function RootLayout({ children }) {
                 >
                   About Us
                 </Link>
-               
+
                 <Link
                   className="block mb-1 text-gray-400 hover:text-white"
                   href="/contact"
@@ -317,6 +343,21 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
+        <div className="fixed bottom-0 right-0 p-4">
+          <Link
+            href="https://api.whatsapp.com/send?phone=919999999999&text=Hello%20Ayushman%20Team,%20I%20would%20like%20to%20book%20a%20demo."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/wp-logo.png"
+              alt="WhatsApp"
+              width={60}
+              height={60}
+              className="cursor-pointer hover:scale-110 transition-transform duration-300"
+            />
+          </Link>
+        </div>
       </body>
     </html>
   );
