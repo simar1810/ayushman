@@ -65,26 +65,15 @@ export default function Home() {
               className="max-h-[450px] sm:max-h-[550px] lg:max-h-[650px] object-contain"
             />
             <div className="w-[80%] md:w-full left-1/2 translate-x-[-50%] absolute flex items-center justify-between bottom-0 md:bottom-6 md:left-0 md:translate-x-0 rounded-full">
-              <div className="bg-white grid grid-cols-2 md:grid-cols-4 items-center divide-x-2 divide-gray-100 gap-4 py-3 px-8 rounded-md md:rounded-full border-1 shadow-lg">
-                <div className="md:px-2 lg:px-4">
-                  <p className="text-[#6DB20D] font-bold">Treatment</p>
-                  <p>Dental Care</p>
-                </div>
-                <div className="md:px-2 lg:px-4">
-                  <p className="text-[#6DB20D] font-bold">Location</p>
-                  <p>Kanpur, U.P.</p>
-                </div>
-                <div className="md:px-2 lg:px-4">
-                  <p className="text-[#6DB20D] font-bold">Clinic name</p>
-                  <p>Shiva Clinic Center</p>
-                </div>
+              <div className="bg-white flex items-center  rounded-full transition-transform duration-300 hover:shadow-xl hover:scale-105">
                 <Button
-                  className="bg-[#6DB20D] hover:bg-[#6DB20D] rounded-full"
+                  className="bg-[#6DB20D] hover:bg-[#5a9c0b] text-white font-semibold py-6 px-10 rounded-full transition-colors duration-200"
                   onClick={handleOpenModal}
                 >
                   Register Now
                 </Button>
               </div>
+
               <Image
                 src="/wp-logo.png"
                 height={100}
