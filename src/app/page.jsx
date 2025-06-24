@@ -191,7 +191,7 @@ export default function Home() {
                 Read More
               </Button>
             </div>
-            <AchievementsCarousel />
+            {/* <AchievementsCarousel /> */}
             <div>
               <Image
                 src="/about.png"
