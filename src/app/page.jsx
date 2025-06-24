@@ -142,7 +142,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <AchievementsCarousel />
+
       <section className="bg-[#EF8C6B]/10">
         <div className="mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -151,9 +151,7 @@ export default function Home() {
                 Business Opportunity
               </h2>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Want to Build Your Own Wellness Business? Become a certified
-                coach and run your own wellness franchise with our complete
-                ecosystem:
+                Want to Build Your Own Wellness Business? Make Your Own Franchise.
               </h3>
               <div className=" space-y-4 mb-8">
                 <div className="flex items-start">
@@ -177,7 +175,7 @@ export default function Home() {
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <p className="text-gray-600">
-                    🤝 Community of 6,800+ coaches
+                    🤝 Community of 1000+ Franchise owner's
                   </p>
                 </div>
               </div>
@@ -185,6 +183,7 @@ export default function Home() {
                 Read More
               </Button>
             </div>
+            {/* <AchievementsCarousel /> */}
             <div>
               <Image
                 src="/about.png"
