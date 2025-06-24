@@ -13,6 +13,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import GoogleTranslate from "@/components/googletranslator";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Toaster />
         <header className="bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center gap-4 py-4 relative">
@@ -129,7 +131,7 @@ export default function RootLayout({ children }) {
                 >
                   About Us
                 </Link>
-               
+
                 <Link
                   className="block mb-1 text-gray-400 hover:text-white"
                   href="/contact"

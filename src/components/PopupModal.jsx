@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import toast from "react-hot-toast";
+import { postData } from "@/lib/api";
 
 function Popupmodal({ onClose, onShowModal }) {
   const [formData, setFormData] = useState({
-    fullName: "",
-    phone: "",
+    name: "",
+    mobileNumber: "",
     email: "",
     message: "",
+    reference: ""
   });
 
   const [loading, setLoading] = useState(false);
@@ -22,13 +25,12 @@ function Popupmodal({ onClose, onShowModal }) {
   };
 
   const validateForm = () => {
-    if (!formData.fullName.trim())
+    if (!formData.name.trim())
       return setError("Full name is required"), false;
-    if (!formData.phone.trim())
-      return setError("Phone number is required"), false;
-    if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, "")))
-      return setError("Please enter a valid 10-digit phone number"), false;
-    if (!formData.category) return setError("Please select a category"), false;
+    if (!formData.mobileNumber.trim())
+      return setError("Mobile Number number is required"), false;
+    if (!/^\d{10}$/.test(formData.mobileNumber.replace(/\D/g, "")))
+      return setError("Please enter a valid 10-digit Mobile Number number"), false;
     return true;
   };
 
@@ -40,10 +42,9 @@ function Popupmodal({ onClose, onShowModal }) {
     setError(null);
 
     try {
-      //api call
-      if (response.status_code === 201) {
+      const response = await postData("app/coach-register/reference", formData, "POST")
+      if (response.status_code === 200) {
         setSuccess(true);
-        displayRazorpay(response.data);
       } else {
         setError(response.message || "Booking failed. Please try again.");
       }
@@ -89,8 +90,8 @@ function Popupmodal({ onClose, onShowModal }) {
               <div className="grid grid-cols-1 gap-5 space-y-4 md:space-y-0 ">
                 <input
                   type="text"
-                  name="fullName"
-                  value={formData.fullName}
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   placeholder="Full Name"
                   className="flex-1 border border-dark rounded-full  px-5 py-3  focus:outline-none focus:ring-secondary"
@@ -100,8 +101,8 @@ function Popupmodal({ onClose, onShowModal }) {
                   <span className="text-black mr-2">🇮🇳 +91</span>
                   <input
                     type="tel"
-                    name="phone"
-                    value={formData.phone}
+                    name="mobileNumber"
+                    value={formData.mobileNumber}
                     onChange={handleChange}
                     placeholder="WhatsApp Preferred"
                     className="flex-1 outline-none "
@@ -112,7 +113,7 @@ function Popupmodal({ onClose, onShowModal }) {
                   <span className="text-black mr-2">Email</span>
                   <input
                     type="email"
-                    name="Email"
+                    name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
@@ -121,13 +122,13 @@ function Popupmodal({ onClose, onShowModal }) {
                   />
                 </div>
                 <div className="flex items-center border border-dark rounded-full px-5 py-3">
-                  <span className="text-black mr-2">Message</span>
+                  <span className="text-black mr-2">Reference</span>
                   <input
                     type="text"
-                    name="Message"
-                    value={formData.message}
+                    name="reference"
+                    value={formData.reference}
                     onChange={handleChange}
-                    placeholder="Enter your Message"
+                    placeholder="Enter coach ID"
                     className="flex-1 outline-none "
                     disabled={loading}
                   />
@@ -139,7 +140,7 @@ function Popupmodal({ onClose, onShowModal }) {
                 disabled={loading}
                 className="w-full bg-primary hover:bg-primary-hover transition text-white py-3 rounded-full font-bold shadow-md flex items-center justify-center animate-bounce-loop"
               >
-                {loading ? <>Processing...</> : "Book a Demo"}
+                {loading ? <>Processing...</> : "Register"}
               </button>
             </form>
           </>
