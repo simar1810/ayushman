@@ -47,7 +47,7 @@ export default function Home() {
                 We Care About Your Wellness
               </h3>
               <p className="text-[24px] md:text-[40px] text-[#6DB20D]">
-                Health care solutions
+                Make Your Health Your Priority
               </p>
               <p className="max-w-[40ch] text-[#5E6883] text-[16px]">
                 Nutrition & Lifestyle Solutions That Work We empower individuals
@@ -89,28 +89,28 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="max-w-xl text-center md:text-left text-3xl font-bold text-gray-900 mb-4">
-              India's leading healthcare search & booking service
+              India's leading Wellness Diet Plan Center
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Users className="h-8 w-8 text-[#67C6A1]" />
-                <div className="text-4xl font-bold text-[#67C6A1]">4,200</div>
+                <div className="text-4xl font-bold text-[#67C6A1]">10,000</div>
               </div>
               <p className="text-gray-600">Active Users</p>
             </div>
             <div className="text-center">
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Heart className="h-8 w-8 text-[#EF8C6B]" />
-                <div className="text-4xl font-bold text-[#EF8C6B]">12M</div>
+                <div className="text-4xl font-bold text-[#EF8C6B]">9999+</div>
               </div>
               <p className="text-gray-600">Happy Patients</p>
             </div>
             <div className="text-center">
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Calendar className="h-8 w-8 text-[#4397F8]" />
-                <div className="text-4xl font-bold text-[#4397F8]">6,887</div>
+                <div className="text-4xl font-bold text-[#4397F8]">1M+</div>
               </div>
               <p className="text-gray-600">Appointments</p>
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="max-w-[20ch] text-[32px] md:text-[48px] leading-[1.2] text-center md:text-left font-bold text-gray-900 mb-4">
-              Holistic Mental Health Solutions
+              Holistic Diet Health Solutions
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
