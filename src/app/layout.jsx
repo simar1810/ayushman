@@ -4,16 +4,12 @@ import {
   Dot,
   Facebook,
   Instagram,
-  Linkedin,
-  Menu,
   Twitter,
   Youtube,
 } from "lucide-react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import GoogleTranslate from "@/components/googletranslator";
-import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,60 +32,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Toaster />
-        <header className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center gap-4 py-4 relative">
-              <nav className="hidden md:flex space-x-4">
-                <Link href="/" className="text-gray-700 hover:text-green-500">
-                  Home
-                </Link>
-                <Link
-                  href="/coaches"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  Coaches
-                </Link>
-                <Link
-                  href="/coach-services"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/contact"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  href="/about"
-                  className="text-gray-700 hover:text-green-500"
-                >
-                  About Us
-                </Link>
-              </nav>
-              <Image
-                src="/logo.svg"
-                height={100}
-                width={100}
-                alt=""
-                className="h-16 object-contain md:absolute top-1/2 left-1/2 md:translate-x-[-50%] md:translate-y-[-50%] "
-              />
-              <div className="flex items-center space-x-4 md:space-x-8">
-                <Button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 ml-auto md:ml-0">
-                  Book Now
-                </Button>
-                <button className="md:hidden">
-                  <Menu className="h-6 w-6" />
-                </button>
-                <div className="flex items-center space-x-2">
-                  <GoogleTranslate />
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
+        <Navbar />
         {children}
         <footer className="bg-[#323333] text-white pt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,11 +52,38 @@ export default function RootLayout({ children }) {
                   nutrition & wellness entrepreneurship.
                 </p>
                 <div className="flex space-x-4">
-                  <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Linkedin className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-                  <Youtube className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  <Link
+                    href="https://www.facebook.com/ayushmanhealthsolution/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/ayushmanhealthsolution/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Instagram className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link
+                    href="https://x.com/AyushmanHS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
+                  <Link
+                    href="https://www.youtube.com/channel/UCzXX45tB44qdszNbPe01S0Q"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    <Youtube className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
+                  </Link>
                 </div>
               </div>
 
@@ -280,24 +250,6 @@ export default function RootLayout({ children }) {
                   Occupational Therapist
                 </Link>
               </div>
-
-              {/* <div>
-              <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-              <div className="space-y-2">
-                <div className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2 text-gray-400" />
-                  <span className="text-gray-400">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-4 w-4 mr-2 text-gray-400" />
-                  <span className="text-gray-400">info@ahs.com</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2 text-gray-400" />
-                  <span className="text-gray-400">123 Health St, Medical City</span>
-                </div>
-              </div>
-            </div> */}
             </div>
           </div>
           <div className="px-4 border-t border-[#5D5D5D] mt-6 py-6 text-center ">
@@ -319,6 +271,21 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
+        <div className="fixed bottom-0 right-0 p-4">
+          <Link
+            href="https://api.whatsapp.com/send?phone=919999999999&text=Hello%20Ayushman%20Team,%20I%20would%20like%20to%20book%20a%20demo."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/wp-logo.png"
+              alt="WhatsApp"
+              width={60}
+              height={60}
+              className="cursor-pointer hover:scale-110 transition-transform duration-300"
+            />
+          </Link>
+        </div>
       </body>
     </html>
   );

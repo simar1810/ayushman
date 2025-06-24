@@ -47,7 +47,7 @@ export default function Home() {
                 We Care About Your Wellness
               </h3>
               <p className="text-[24px] md:text-[40px] text-[#6DB20D]">
-                Health care solutions
+                Make Your Health Your Priority
               </p>
               <p className="max-w-[40ch] text-[#5E6883] text-[16px]">
                 Nutrition & Lifestyle Solutions That Work We empower individuals
@@ -65,33 +65,14 @@ export default function Home() {
               className="max-h-[450px] sm:max-h-[550px] lg:max-h-[650px] object-contain"
             />
             <div className="w-[80%] md:w-full left-1/2 translate-x-[-50%] absolute flex items-center justify-between bottom-0 md:bottom-6 md:left-0 md:translate-x-0 rounded-full">
-              <div className="bg-white grid grid-cols-2 md:grid-cols-4 items-center divide-x-2 divide-gray-100 gap-4 py-3 px-8 rounded-md md:rounded-full border-1 shadow-lg">
-                <div className="md:px-2 lg:px-4">
-                  <p className="text-[#6DB20D] font-bold">Treatment</p>
-                  <p>Dental Care</p>
-                </div>
-                <div className="md:px-2 lg:px-4">
-                  <p className="text-[#6DB20D] font-bold">Location</p>
-                  <p>Kanpur, U.P.</p>
-                </div>
-                <div className="md:px-2 lg:px-4">
-                  <p className="text-[#6DB20D] font-bold">Clinic name</p>
-                  <p>Shiva Clinic Center</p>
-                </div>
+              <div className="bg-[#F0FFD9]  rounded-full shadow-md mt-[200px]  hover:shadow-xl hover:scale-105 transition-transform duration-300 inline-flex items-center justify-center px-2 py-2 w-full sm:w-auto">
                 <Button
-                  className="bg-[#6DB20D] hover:bg-[#6DB20D] rounded-full"
+                  className="w-full sm:w-auto bg-[#6DB20D] hover:bg-[#5a9c0b] text-white font-semibold text-sm sm:text-base md:text-lg py-2 sm:py-3 md:py-4 px-4 sm:px-6 md:px-10 rounded-full transition-colors duration-200"
                   onClick={handleOpenModal}
                 >
                   Register Now
                 </Button>
               </div>
-              <Image
-                src="/wp-logo.png"
-                height={100}
-                width={100}
-                alt=""
-                className="w-[56px] h-[56px] object-cover mr-10 hidden lg:block"
-              />
             </div>
           </div>
         </div>
@@ -100,28 +81,28 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="max-w-xl text-center md:text-left text-3xl font-bold text-gray-900 mb-4">
-              India's leading healthcare search & booking service
+              India's leading Wellness Diet Plan Center
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Users className="h-8 w-8 text-[#67C6A1]" />
-                <div className="text-4xl font-bold text-[#67C6A1]">4,200</div>
+                <div className="text-4xl font-bold text-[#67C6A1]">10,000</div>
               </div>
               <p className="text-gray-600">Active Users</p>
             </div>
             <div className="text-center">
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Heart className="h-8 w-8 text-[#EF8C6B]" />
-                <div className="text-4xl font-bold text-[#EF8C6B]">12M</div>
+                <div className="text-4xl font-bold text-[#EF8C6B]">9999+</div>
               </div>
               <p className="text-gray-600">Happy Patients</p>
             </div>
             <div className="text-center">
               <div className="mb-2 flex items-center justify-center gap-4">
                 <Calendar className="h-8 w-8 text-[#4397F8]" />
-                <div className="text-4xl font-bold text-[#4397F8]">6,887</div>
+                <div className="text-4xl font-bold text-[#4397F8]">1M+</div>
               </div>
               <p className="text-gray-600">Appointments</p>
             </div>
@@ -132,7 +113,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="max-w-[20ch] text-[32px] md:text-[48px] leading-[1.2] text-center md:text-left font-bold text-gray-900 mb-4">
-              Holistic Mental Health Solutions
+              Holistic Diet Health Solutions
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,7 +142,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <AchievementsCarousel />
+
       <section className="bg-[#EF8C6B]/10">
         <div className="mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -170,9 +151,7 @@ export default function Home() {
                 Business Opportunity
               </h2>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Want to Build Your Own Wellness Business? Become a certified
-                coach and run your own wellness franchise with our complete
-                ecosystem:
+                Want to Build Your Own Wellness Business? Make Your Own Franchise.
               </h3>
               <div className=" space-y-4 mb-8">
                 <div className="flex items-start">
@@ -196,7 +175,7 @@ export default function Home() {
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <p className="text-gray-600">
-                    🤝 Community of 6,800+ coaches
+                    🤝 Community of 1000+ Franchise owner's
                   </p>
                 </div>
               </div>
@@ -204,6 +183,7 @@ export default function Home() {
                 Read More
               </Button>
             </div>
+            {/* <AchievementsCarousel /> */}
             <div>
               <Image
                 src="/about.png"
@@ -217,9 +197,9 @@ export default function Home() {
         </div>
       </section>
       <TestimonialsCarousel />
-      <RegistrationForm />
-      <OurCoachesCarousel />
-      <section className="py-16 bg-white">
+      {/* <RegistrationForm />
+      <OurCoachesCarousel /> */}
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -236,9 +216,9 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
       {showModal && <Popupmodal onClose={handleCloseModal} />}
-      <Faqs />
+      {/* <Faqs /> */}
     </main>
   );
 }
