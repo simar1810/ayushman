@@ -10,8 +10,6 @@ function Popupmodal({ onClose, onShowModal }) {
     email: "",
     message: "",
     reference: "",
-    state: "",
-    city: ""
   });
 
   const [loading, setLoading] = useState(false);
@@ -131,30 +129,6 @@ function Popupmodal({ onClose, onShowModal }) {
                     value={formData.reference}
                     onChange={handleChange}
                     placeholder="Enter coach ID"
-                    className="flex-1 outline-none "
-                    disabled={loading}
-                  />
-                </div>
-                <div className="flex items-center border border-dark rounded-full px-5 py-3">
-                  <span className="text-black mr-2">State</span>
-                  <input
-                    type="text"
-                    name="state"
-                    value={formData.state}
-                    onChange={handleChange}
-                    placeholder="Enter state"
-                    className="flex-1 outline-none "
-                    disabled={loading}
-                  />
-                </div>
-                <div className="flex items-center border border-dark rounded-full px-5 py-3">
-                  <span className="text-black mr-2">City</span>
-                  <input
-                    type="text"
-                    name="city"
-                    value={formData.city}
-                    onChange={handleChange}
-                    placeholder="Enter city"
                     className="flex-1 outline-none "
                     disabled={loading}
                   />
