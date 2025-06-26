@@ -107,7 +107,7 @@ export default function Page() {
   );
 
   const handleCoachClick = (coachId) => {
-    window.location.href = `http://localhost:3021/${coachId}`;
+    window.location.href = `/health-coaches/${coachId}`;
   };
 
   const handleStateChange = (state) => {
