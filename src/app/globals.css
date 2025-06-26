@@ -44,6 +44,10 @@
 }
 
 :root {
+  --accent-1: #67BC2A;
+  --accent-2: #6BFF00;
+  --accent-3: #03632C;
+  --accent-4: #D6FFB9;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -116,6 +120,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
