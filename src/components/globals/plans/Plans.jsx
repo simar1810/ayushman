@@ -77,7 +77,7 @@ export default function Plans({
     >
       Register Now
     </Link>} */}
-    <p className="text-center font-semibold mt-2 md:mt-4">Note: No Credit Card Required to purchase these subscriptions</p>
+    {/* <p className="text-center font-semibold mt-2 md:mt-4">Note: No Credit Card Required to purchase these subscriptions</p> */}
   </div>
 }
 
@@ -88,12 +88,12 @@ function SalesContact({
 }) {
   const [modalOpened, setModalOpened] = useState(false);
   return <>
-    <button
+    {/* <button
       className="w-fit !bg-[var(--accent-1)] text-white font-bold block px-4 py-3 md:mt-8 mt-4 mx-auto rounded-xl"
       onClick={() => setModalOpened(true)}
     >
       Register Now
-    </button>
+    </button> */}
     {modalOpened && <RegisterUser
       promo={promo}
       plan={plans[0]}

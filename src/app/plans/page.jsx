@@ -41,6 +41,19 @@ export default function Page() {
     }
   }
 
+  return <div id="plans-section">
+    <Plans
+      onShowDiscountModal={() => setDicountModal(prev => prev.displayed === true
+        ? prev
+        : ({
+          ...prev,
+          opened: true
+        }))}
+      promo={promo}
+      plans={plans}
+    />
+  </div>
+
   return (
     <div className="w-screen">
       <WpExpiryButton />

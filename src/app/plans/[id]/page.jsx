@@ -71,6 +71,19 @@ export default function Page() {
     <Loader className="animate-spin" />
   </div>
 
+  return <div id="plans-section">
+    <Plans
+      onShowDiscountModal={() => setDicountModal(prev => prev.displayed === true
+        ? prev
+        : ({
+          ...prev,
+          opened: true
+        }))}
+      promo={promo}
+      plans={plans}
+    />
+  </div>
+
   return (
     <div className="w-screen bg-[#F5F5F5]">
       <WpExpiryButton />
