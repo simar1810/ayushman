@@ -13,7 +13,9 @@ export const Form = () => {
     const [name, setname] = useState('');
     const [email, setemail] = useState('');
     const [HID, sethid] = useState('');
+
     const [city,setcity]=useState('');
+    const [state,setstate]=useState('');
     const [mobileNumber,setmobilenumber]=useState('');
     const [values, setValues] = useState({
         loading: false,
@@ -25,7 +27,7 @@ export const Form = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
          setValues({ ...values, loading: true });
-         const newUser = { name, email, mobileNumber, city,HID };
+         const newUser = { name, email, mobileNumber, city,state };
          console.log(newUser)
          addAppCoachController(newUser, token).then(data => {
             if (data && data.error) { setValues({ ...values, error: data.error, loading: false }); toast.error(data.error); }
@@ -49,14 +51,17 @@ export const Form = () => {
 
             <form onSubmit={handleSubmit}>
                 
-                <div className="mb-5 mt-5 max-w-[350px] mx-auto">
+                {/* <div className="mb-5 mt-5 max-w-[350px] mx-auto">
                     <input value={HID} onChange={(e) => sethid(e.target.value)} type="text" placeholder='HID' required className='border w-[350px] h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-indigo-500 focus:ring-1 rounded-md' />
-                </div>
+                </div> */}
                 <div className="mb-5 mt-5 max-w-[350px] mx-auto">
                     <input value={name} onChange={(e) => setname(e.target.value)} type="text" placeholder='Name'  className='border w-[350px] h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-indigo-500 focus:ring-1 rounded-md' />
                 </div>
                 <div className="mb-5 mt-5 max-w-[350px] mx-auto">
                     <input value={city} onChange={(e) => setcity(e.target.value)} type="text" placeholder='City' className='border w-[350px] h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-indigo-500 focus:ring-1 rounded-md' />
+                </div>                
+                <div className="mb-5 mt-5 max-w-[350px] mx-auto">
+                    <input value={state} onChange={(e) => setstate(e.target.value)} type="text" placeholder='State' className='border w-[350px] h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-indigo-500 focus:ring-1 rounded-md' />
                 </div>                
                 <div className="mb-5 mt-5 max-w-[350px] mx-auto">
                     <input value={mobileNumber} onChange={(e) => setmobilenumber(e.target.value)} type="number" placeholder='Mobile Number'  className='border w-[350px] h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-indigo-500 focus:ring-1 rounded-md' />

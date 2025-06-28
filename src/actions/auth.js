@@ -393,7 +393,7 @@ export const getAllAppCoaches = async (page, search, token, coachType, coachLeve
 
 export const addAppCoachController = async (newUser, token) => {
   try {
-    const response = await fetch(`${API}/app/adminCreateCoach`, {
+    const response = await fetch(`${API}/app/admincreate-coach`, {
       method: "POST",
       headers: {
         Accept: "application/json",

@@ -62,7 +62,6 @@ const AllAppCoaches = () => {
   const numericType = getTypeFromQuery(urlType);
 
   const { name, email, mobileNumber, city, coachRef, rating, review } = values;
-  console.error(appcoach)
   const handleSubmit = (coachid) => (e) => {
     e.preventDefault();
     setIsEditOpen(false);
